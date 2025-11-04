@@ -1,1 +1,0 @@
-Image gallery banani hai saloon ki web per aur us me saloon sy related styles aur packages ho jisme cards ho aur sath me carousel (proper functional) aur light box effect (modal pop up ho) aur ek footer ho basically ek page ho cards aur image gallery ka
