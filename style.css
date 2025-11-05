@@ -1,8 +1,4 @@
-/* Human-friendly CSS: grouped, commented, and adjusted light theme */
-
-/* -----------------------------
-   Theme variables (light mode)
-   ----------------------------- */
+/* Light mode */
 :root {
     /* Page background (light gray) */
     --calc-bg-h: 220;
@@ -11,9 +7,11 @@
     --calc-bg: var(--calc-bg-h), var(--calc-bg-s), var(--calc-bg-l);
 
     /* Calculator container (light mode): modern gray */
-    --calc-container-h: 220;  /* slight blue tint for sophistication */
+    --calc-container-h: 220;
+    /* slight blue tint for sophistication */
     --calc-container-s: 10%;
-    --calc-container-l: 90%;  /* lighter gray for contrast */
+    --calc-container-l: 90%;
+    /* lighter gray for contrast */
     --calc-container-bg: var(--calc-container-h), var(--calc-container-s), var(--calc-container-l);
 
     /* Buttons and text */
@@ -44,9 +42,13 @@
     --primary-foreground: white;
 
     /* Soft shadows */
-    --calc-button-shadow-1-h: 200; --calc-button-shadow-1-s: 20%; --calc-button-shadow-1-l: 89.9%;
+    --calc-button-shadow-1-h: 200;
+    --calc-button-shadow-1-s: 20%;
+    --calc-button-shadow-1-l: 89.9%;
     --calc-button-shadow-1: var(--calc-button-shadow-1-h), var(--calc-button-shadow-1-s), var(--calc-button-shadow-1-l);
-    --calc-button-shadow-2-h: 240; --calc-button-shadow-2-s: 5%; --calc-button-shadow-2-l: 80%;
+    --calc-button-shadow-2-h: 240;
+    --calc-button-shadow-2-s: 5%;
+    --calc-button-shadow-2-l: 80%;
     --calc-button-shadow-2: var(--calc-button-shadow-2-h), var(--calc-button-shadow-2-s), var(--calc-button-shadow-2-l);
 
     --secondary-button-text: hsl(var(--calc-button-text-h), var(--calc-button-text-s), 50%);
@@ -56,18 +58,33 @@
    Dark theme overrides (unchanged)
    ----------------------------- */
 .dark {
-    --calc-bg-h: 220; --calc-bg-s: 15%; --calc-bg-l: 12%;
-    --calc-container-h: 220; --calc-container-s: 15%; --calc-container-l: 20%;
+    --calc-bg-h: 220;
+    --calc-bg-s: 15%;
+    --calc-bg-l: 12%;
+    --calc-container-h: 220;
+    --calc-container-s: 15%;
+    --calc-container-l: 20%;
     --calc-container-bg: var(--calc-container-h), var(--calc-container-s), var(--calc-container-l);
 
-    --calc-button-h: 220; --calc-button-s: 15%; --calc-button-l: 25%;
-    --calc-button-text-h: 220; --calc-button-text-s: 15%; --calc-button-text-l: 85%;
+    --calc-button-h: 220;
+    --calc-button-s: 15%;
+    --calc-button-l: 25%;
+    --calc-button-text-h: 220;
+    --calc-button-text-s: 15%;
+    --calc-button-text-l: 85%;
 
-    --calc-screen-bg-l: 15%; --calc-display-text-l: 95%;
-    --calc-button-shadow-1-h: 180; --calc-button-shadow-1-s: 10%; --calc-button-shadow-1-l: 40%;
-    --calc-button-shadow-2-h: 220; --calc-button-shadow-2-s: 15%; --calc-button-shadow-2-l: 10%;
+    --calc-screen-bg-l: 15%;
+    --calc-display-text-l: 95%;
+    --calc-button-shadow-1-h: 180;
+    --calc-button-shadow-1-s: 10%;
+    --calc-button-shadow-1-l: 40%;
+    --calc-button-shadow-2-h: 220;
+    --calc-button-shadow-2-s: 15%;
+    --calc-button-shadow-2-l: 10%;
 
-    --primary-h: 200; --primary-s: 90%; --primary-l: 50%;
+    --primary-h: 200;
+    --primary-s: 90%;
+    --primary-l: 50%;
     --secondary-button-text: hsl(var(--calc-button-text-h), var(--calc-button-text-s), 70%);
 }
 
@@ -105,7 +122,7 @@ body {
     padding: 1rem;
     background-color: hsl(var(--calc-container-bg));
     box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.05),
-                0 25px 50px -12px hsla(0, 0%, 0%, 0.25);
+        0 25px 50px -12px hsla(0, 0%, 0%, 0.25);
 }
 
 /* Screen */
@@ -118,7 +135,10 @@ body {
     border: 1px solid hsla(0, 0%, 0%, 0.1);
     position: relative;
 }
-.dark .calc-screen { border: 1px solid hsla(220, 15%, 50%, 0.1); }
+
+.dark .calc-screen {
+    border: 1px solid hsla(220, 15%, 50%, 0.1);
+}
 
 /* Theme toggle */
 .theme-toggle {
@@ -133,22 +153,97 @@ body {
     color: var(--secondary-button-text);
     transition: color 200ms ease;
 }
-.theme-toggle:hover { color: var(--primary); }
-.icon { width: 1rem; height: 1rem; display: block; }
+
+.theme-toggle:hover {
+    color: var(--primary);
+}
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    display: block;
+}
 
 /* Display */
-.display-content { text-align: right; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 0.5rem; }
-.equation-text { position: absolute; top: 0.5rem; left: 1rem; right: 2.5rem; font-size: 1.1rem; color: var(--muted-foreground); opacity: 0.8; overflow-x: auto; white-space: nowrap; text-align: left; direction: rtl; max-height: 1.5rem; }
-.current-display { font-size: 3rem; font-weight: 300; color: hsl(var(--calc-display-text)); word-break: break-all; line-height: 1; }
+.display-content {
+    text-align: right;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 0.5rem;
+}
+
+.equation-text {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    right: 2.5rem;
+    font-size: 1.1rem;
+    color: var(--muted-foreground);
+    opacity: 0.8;
+    overflow-x: auto;
+    white-space: nowrap;
+    text-align: left;
+    direction: rtl;
+    max-height: 1.5rem;
+}
+
+.current-display {
+    font-size: 3rem;
+    font-weight: 300;
+    color: hsl(var(--calc-display-text));
+    word-break: break-all;
+    line-height: 1;
+}
 
 /* Buttons grid */
-.button-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; }
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+}
 
-.calc-button { height: 4.5rem; border-radius: 0.75rem; font-weight: 600; font-size: 1.5rem; transition: all 200ms ease; cursor: pointer; border: none; }
-.calc-button.default { background-color: hsl(var(--calc-button)); color: hsl(var(--calc-button-text)); box-shadow: 4px 4px 8px hsla(var(--calc-button-shadow-2), 0.5), -4px -4px 8px hsla(var(--calc-button-shadow-1), 0.5); }
-.calc-button.default.clear-button { color: var(--secondary-button-text); font-weight: 500; }
-.calc-button.default:active { box-shadow: inset 3px 3px 6px hsla(var(--calc-button-shadow-2), 0.8), inset -3px -3px 6px hsla(var(--calc-button-shadow-1), 0.8); }
-.calc-button.operator { background-color: var(--primary); color: var(--primary-foreground); font-weight: 500; box-shadow: 5px 5px 10px hsla(var(--primary-h), var(--primary-s), 40%, 0.4), -5px -5px 10px hsla(var(--primary-h), var(--primary-s), 60%, 0.1); }
-.dark .calc-button.operator { box-shadow: 5px 5px 10px hsla(var(--primary-h), var(--primary-s), 40%, 0.2), -5px -5px 10px hsla(var(--primary-h), var(--primary-s), 60%, 0.05); }
-.calc-button.operator:active { box-shadow: inset 4px 4px 8px hsla(var(--primary-h), var(--primary-s), 40%, 0.8); }
-.calc-button.wide { grid-column: span 2 / span 2; }
+.calc-button {
+    height: 4.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition: all 200ms ease;
+    cursor: pointer;
+    border: none;
+}
+
+.calc-button.default {
+    background-color: hsl(var(--calc-button));
+    color: hsl(var(--calc-button-text));
+    box-shadow: 4px 4px 8px hsla(var(--calc-button-shadow-2), 0.5), -4px -4px 8px hsla(var(--calc-button-shadow-1), 0.5);
+}
+
+.calc-button.default.clear-button {
+    color: var(--secondary-button-text);
+    font-weight: 500;
+}
+
+.calc-button.default:active {
+    box-shadow: inset 3px 3px 6px hsla(var(--calc-button-shadow-2), 0.8), inset -3px -3px 6px hsla(var(--calc-button-shadow-1), 0.8);
+}
+
+.calc-button.operator {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    font-weight: 500;
+    box-shadow: 5px 5px 10px hsla(var(--primary-h), var(--primary-s), 40%, 0.4), -5px -5px 10px hsla(var(--primary-h), var(--primary-s), 60%, 0.1);
+}
+
+.dark .calc-button.operator {
+    box-shadow: 5px 5px 10px hsla(var(--primary-h), var(--primary-s), 40%, 0.2), -5px -5px 10px hsla(var(--primary-h), var(--primary-s), 60%, 0.05);
+}
+
+.calc-button.operator:active {
+    box-shadow: inset 4px 4px 8px hsla(var(--primary-h), var(--primary-s), 40%, 0.8);
+}
+
+.calc-button.wide {
+    grid-column: span 2 / span 2;
+}
